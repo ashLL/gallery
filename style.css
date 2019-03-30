@@ -3,11 +3,11 @@ html{
 }
 .logo {
     font-family: 'Cormorant', serif;
-    font-size: 50px;
+    font-size: 40px;
     margin-left: 30px;
     margin-top: 10px;
     text-decoration: none;
-    color: black;
+   color: black;
     font-weight: bold;
 }
 body{
@@ -25,5 +25,40 @@ header *{
 
 .header-links {
     float: right;
-    margin-top: 30px;
+    margin-top: 27px;
+    font-size: 1.3em;
+    margin-right: 30px;
 }
+
+/* for all animations */
+.div-swipe .swipe {
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.div-swipe:hover .swipe {
+    background-position: 0%;
+}
+
+/* when going from "gallery" to "by ash lithgow" */
+.div-swipe:hover .swipe.from{
+    transition: all 1.2s;
+}
+.div-swipe:hover .swipe.to{
+    transition: all 3s;
+}
+
+/* when going from "by ash lithgow" to "gallery" */
+.from{
+    transition: all 1.5s linear 0.7s;
+    background-image: linear-gradient(to right, transparent 50%, black 50%);
+}
+.to {
+    transition: all 2.5s;
+    position: relative;
+    right: 150px;
+    background-image: linear-gradient(to right, black 50%, transparent 50%);
+    font-size: 150%;
+}
+
